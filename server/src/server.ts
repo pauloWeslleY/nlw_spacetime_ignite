@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import fastify from 'fastify'
 import { PrismaClient } from '@prisma/client'
 
@@ -6,7 +7,6 @@ const prisma = new PrismaClient()
 
 app.get('/users', async () => {
   const users = await prisma.user.findMany()
-
   return users
 })
 
